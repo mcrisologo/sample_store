@@ -84,3 +84,5 @@ Spree.user_class = "Spree::LegacyUser"
 # the class name:
 #
 # Spree::UserLastUrlStorer.rules << 'Spree::UserLastUrlStorer::Rules::AuthenticationRule'
+
+Spree::Config.order_number_generator = OrderNumberGenerator.new

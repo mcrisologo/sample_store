@@ -18,6 +18,12 @@ module AmazingStore
       end
     end
 
+    config.before_initialize do
+      Dir.glob(File.join(File.dirname(__FILE__), '../app/services/*.rb')) do |c|
+        require_dependency(c)
+      end
+    end
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
